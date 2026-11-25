@@ -1,0 +1,16 @@
+export default {
+  'home.notifications': 'Notifications',
+  'home.notificationsUnread': 'Notifications, {count} unread',
+  'home.profile': 'Profile',
+  'home.greeting': 'Hi, RKU Student! 👋',
+  'home.tagline': 'YOUR CAMPUS, CONNECTED',
+  'home.hero': "Lost something? Let's find it!",
+  'home.searchPlaceholder': 'Search for lost items...',
+  'home.findLost': 'Find Lost Items',
+  'home.reportFound': 'Report Found Items',
+  'home.categories': 'Categories',
+  'home.recentlyFound': 'Recently Found',
+  'home.seeAll': 'See all',
+  'home.needReport': 'Need to report a loss?',
+  'home.reportLost': 'Report a Lost Item',
+} as const

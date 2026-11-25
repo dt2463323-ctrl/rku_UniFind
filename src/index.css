@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* Inter variable, self-hosted (Google Fonts, OFL) */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Inter variable, self-hosted (Google Fonts, OFL) */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --color-primary: #2f6be6;
+  --color-primary-dark: #2257c7;
+  --color-primary-soft: #e7eefc;
+  --color-indigo: #6b5be6;
+  --color-accent: #f6a03a;
+  --color-navy: #1d2742;
+  --color-muted: #5b6482;
+  --color-surface: #f5f6fa;
+  --color-success: #3fb27f;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #eef0f6;
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 22%, white);
+  color: var(--color-navy);
+}
+
+input,
+textarea,
+select {
+  caret-color: var(--tone, var(--color-primary));
+}
+
+/* Inputs draw their own focus ring */
+:focus-visible:not(input, textarea, select) {
+  outline: 2px solid var(--tone, var(--color-primary));
+  outline-offset: 2px;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes meter {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+
+/* Keep layout stable when the page scrollbar is hidden */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Desktop phone frame is 25% smaller; layout space shrinks with it */
+@media (min-width: 768px) {
+  .phone-frame {
+    zoom: 0.9;
+  }
+}
+.phone-frame main {
+  overscroll-behavior: contain;
+}
+
+/* Prevent iOS Safari auto-zoom on focus (needs >= 16px) */
+@media (max-width: 767px), (hover: none) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}

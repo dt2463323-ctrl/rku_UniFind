@@ -1,0 +1,41 @@
+import type en from '../en/common'
+
+export default {
+  'category.Electronics': '電子機器',
+  'category.Wallets': '財布',
+  'category.Keys': '鍵',
+  'category.Bags': 'バッグ',
+  'category.Accessories': 'アクセサリー',
+  'category.Books': '本・教科書',
+
+  'location.Library': '図書館',
+  'location.Cafeteria': '学食',
+  'location.Gym': '体育館',
+  'location.Main Building': '本館',
+  'location.Building 3': '3号館',
+  'location.Bicycle parking': '駐輪場',
+  'location.Student Hall': '学生ホール',
+
+  'status.lost': '落とし物',
+  'status.found': '拾得物',
+  'status.resolved': '解決済み',
+
+  'common.back': '戻る',
+  'common.cancel': 'キャンセル',
+  'common.save': '保存',
+  'common.delete': '削除',
+  'common.close': '閉じる',
+  'common.submit': '送信',
+  'common.edit': '編集',
+  'common.confirm': '確認',
+  'common.done': '完了',
+  'common.next': '次へ',
+  'common.all': 'すべて',
+  'common.viewAll': 'すべて見る',
+  'common.language': '言語',
+  'common.english': 'English',
+  'common.japanese': '日本語',
+  'common.notFound': 'ページが見つかりません',
+  'common.comingSoon': 'この画面は近日公開予定です。',
+  'common.backHome': 'ホームに戻る',
+} satisfies Record<keyof typeof en, string>
